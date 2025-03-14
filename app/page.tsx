@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar/navBar";
 import Projects from "./Components/Projects/projects";
 import About from "./Components/About/About";
 import Background from "./Components/Background/Background";
+import Contact from "./Components/Contanct/contact";
 
 export default function Main() {
   return (
@@ -18,6 +19,9 @@ export default function Main() {
         </section>
         <section id="projects" className="min-h-screen mt-6 flex items-center">
           <Projects />
+        </section>
+        <section id="contact" className="min-h-screen mt-6 flex items-center">
+          <Contact />
         </section>
       </main>
     </div>
