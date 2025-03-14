@@ -16,7 +16,7 @@ export default function Main() {
         <section id="about" className="min-h-screen flex items-center">
           <About />
         </section>
-        <section id="projects" className="min-h-screen flex items-center">
+        <section id="projects" className="min-h-screen mt-6 flex items-center">
           <Projects />
         </section>
       </main>
