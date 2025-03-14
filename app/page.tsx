@@ -1,8 +1,21 @@
+import Home from "./Components/Home/home";
+import NavBar from "./Components/NavBar/navBar";
+
+import Projects from "./Components/Projects/projects";
+import About from "./Components/About/About";
+import Background from "./Components/Background/Background";
 
 export default function Main() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-     
+    <div className="relative">
+      <Background />
+      <NavBar />
+      <div className="md:mt-24 mt-16">
+        <Home />
+      </div>
+      <About />
+      <Projects />
+    
     </div>
   );
 }
