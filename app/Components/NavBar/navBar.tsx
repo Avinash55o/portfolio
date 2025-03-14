@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars } from "react-icons/fa";
 import SideBar from "./sidebar/sideBar";
+import ThemeToggle from "./theme/themeToggle";
 
 const menuItems = [
   { name: "Home", icon: <FaHome />, link: "#home" },
@@ -21,7 +22,7 @@ export default function NavBar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full bg-white shadow-lg rounded-4xl mt-4   flex justify-between items-center py-2 px-6 md:px-16 z-50">
+      <nav className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-4xl mt-4 flex justify-between items-center py-2 px-6 md:px-16 z-50">
         {/* Logo Section */}
         <div className="text-xl font-bold text-gray-800">Portfolio</div>
 
@@ -41,7 +42,9 @@ export default function NavBar() {
               {item.name}
             </button>
           ))}
+          
         </div>
+        <ThemeToggle />
 
         {/* Mobile Menu Icon - Opens Sidebar */}
         <button
