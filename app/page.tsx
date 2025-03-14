@@ -1,6 +1,5 @@
 import Home from "./Components/Home/home";
 import NavBar from "./Components/NavBar/navBar";
-
 import Projects from "./Components/Projects/projects";
 import About from "./Components/About/About";
 import Background from "./Components/Background/Background";
@@ -10,12 +9,17 @@ export default function Main() {
     <div className="relative">
       <Background />
       <NavBar />
-      <div className="md:mt-24 mt-16">
-        <Home />
-      </div>
-      <About />
-      <Projects />
-    
+      <main className="relative z-10">
+        <section className="min-h-screen flex items-center">
+          <Home />
+        </section>
+        <section className="min-h-screen flex items-center">
+          <About />
+        </section>
+        <section className="min-h-screen flex items-center">
+          <Projects />
+        </section>
+      </main>
     </div>
   );
 }

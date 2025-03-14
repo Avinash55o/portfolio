@@ -41,13 +41,13 @@ const projectsData: ProjectItem[] = [
 
   export default function Projects(){
     return (
-        <div className="min-h-screen text-white py-12 px-4">
-        <h1 className="text-4xl font-bold text-center mb-8">My Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full py-12 px-4">
+        <h1 className="text-4xl font-bold text-center mb-12">My Projects</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="group relative w-full h-96 rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105"
+              className="group relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105"
             >
               {/* Front Side */}
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-600 p-6 flex flex-col justify-between">
