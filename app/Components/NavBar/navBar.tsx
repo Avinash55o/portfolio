@@ -4,15 +4,19 @@ import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars } from "react-icon
 import SideBar from "./sidebar/sideBar";
 
 const menuItems = [
-  { name: "Home", icon: <FaHome />, link: "#" },
-  { name: "About", icon: <FaUser />, link: "#" },
-  { name: "Projects", icon: <FaProjectDiagram />, link: "#" },
-  { name: "Contact", icon: <FaEnvelope />, link: "#" },
+  { name: "Home", icon: <FaHome />, link: "#home" },
+  { name: "About", icon: <FaUser />, link: "#about" },
+  { name: "Projects", icon: <FaProjectDiagram />, link: "#projects" },
+  { name: "Contact", icon: <FaEnvelope />, link: "#contact" },
 ];
 
 export default function NavBar() {
   const [active, setActive] = useState("Home");
   const [sidebarOpen, setSidebarOpen] = useState(false); // ✅ Sidebar state
+  const handleClick = (name: string, link: string) => {
+    setActive(name);
+    document.querySelector(link)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -31,7 +35,7 @@ export default function NavBar() {
                   ? "bg-pink-500 text-white shadow-md"
                   : "text-gray-600 hover:text-gray-800"
               }`}
-              onClick={() => setActive(item.name)}
+              onClick={() => handleClick(item.name, item.link)}
             >
               <span className="mr-2">{item.icon}</span>
               {item.name}

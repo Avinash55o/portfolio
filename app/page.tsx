@@ -10,13 +10,13 @@ export default function Main() {
       <Background />
       <NavBar />
       <main className="relative z-10">
-        <section className="min-h-screen flex items-center">
+        <section id="home" className="min-h-screen flex items-center">
           <Home />
         </section>
-        <section className="min-h-screen flex items-center">
+        <section id="about" className="min-h-screen flex items-center">
           <About />
         </section>
-        <section className="min-h-screen flex items-center">
+        <section id="projects" className="min-h-screen flex items-center">
           <Projects />
         </section>
       </main>

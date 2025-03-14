@@ -2,10 +2,10 @@
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const menuItems = [
-  { name: "Home", icon: <FaHome />, link: "#" },
-  { name: "About", icon: <FaUser />, link: "#" },
-  { name: "Projects", icon: <FaProjectDiagram />, link: "#" },
-  { name: "Contact", icon: <FaEnvelope />, link: "#" },
+  { name: "Home", icon: <FaHome />, link: "#home" },
+  { name: "About", icon: <FaUser />, link: "#about" },
+  { name: "Projects", icon: <FaProjectDiagram />, link: "#projects" },
+  { name: "Contact", icon: <FaEnvelope />, link: "#contact" },
 ];
 
 export default function SideBar({ closeSidebar }: { closeSidebar: () => void }) {

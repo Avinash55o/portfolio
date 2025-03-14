@@ -12,7 +12,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-gray-900"
+            className="text-5xl md:text-6xl font-bold text-fuchsia-50"
           >
              Hi I&apos;m <span className="text-pink-500">Avinash</span> 👋
           </motion.h1>
@@ -21,7 +21,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-gray-600"
+            className="text-lg text-fuchsia-50"
           >
             A passionate <span className="text-pink-500 font-medium">Full-Stack Developer</span> & Web3 enthusiast, creating beautiful and functional web experiences.
           </motion.p>
