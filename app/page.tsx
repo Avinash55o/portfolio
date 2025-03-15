@@ -3,7 +3,7 @@ import NavBar from "./Components/NavBar/navBar";
 import Projects from "./Components/Projects/projects";
 import About from "./Components/About/About";
 import Background from "./Components/Background/Background";
-import Contact from "./Components/Contanct/contact";
+import Contact from "./Components/Contact/contact";
 
 export default function Main() {
   return (
