@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bit Coin
+* source:	https://sketchfab.com/3d-models/bit-coin-9488d7d5aa2f4c1c97774d56e1fb4aec
+* author:	Márcio N. (https://sketchfab.com/marcio3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bit Coin" (https://sketchfab.com/3d-models/bit-coin-9488d7d5aa2f4c1c97774d56e1fb4aec) by Márcio N. (https://sketchfab.com/marcio3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
