@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars } from "react-icons/fa";
 import SideBar from "./sidebar/sideBar";
 import ThemeToggle from "./theme/themeToggle";
@@ -18,6 +18,26 @@ export default function NavBar() {
     setActive(name);
     document.querySelector(link)?.scrollIntoView({ behavior: "smooth" });
   };
+
+   // Auto-detect the active section based on scroll
+   useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // Offset to detect sections correctly
+
+      menuItems.forEach((item) => {
+        const section = document.querySelector(item.link);
+        if (section) {
+          const { offsetTop, offsetHeight } = section as HTMLElement;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActive(item.name);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -44,7 +64,9 @@ export default function NavBar() {
           ))}
           
         </div>
+        <div className="hidden md:block">
         <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Icon - Opens Sidebar */}
         <button

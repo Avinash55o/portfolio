@@ -1,6 +1,6 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import ThemeToggle from "../theme/themeToggle";
+import { useState} from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const menuItems = [
@@ -20,26 +20,7 @@ export default function SideBar({ closeSidebar }: { closeSidebar: () => void }) 
     closeSidebar(); // Close sidebar after clicking
   };
 
-  // Auto-detect the active section based on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; // Offset to detect sections correctly
-
-      menuItems.forEach((item) => {
-        const section = document.querySelector(item.link);
-        if (section) {
-          const { offsetTop, offsetHeight } = section as HTMLElement;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActive(item.name);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+ 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-end z-50">
       <div className="w-64 bg-white h-full shadow-lg flex flex-col p-5">
@@ -66,7 +47,11 @@ export default function SideBar({ closeSidebar }: { closeSidebar: () => void }) 
               </button>
             </li>
           ))}
+         
         </ul>
+        <div className="mt-4">
+         <ThemeToggle />
+        </div>   
       </div>
     </div>
   );
