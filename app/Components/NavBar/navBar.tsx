@@ -24,7 +24,7 @@ export default function NavBar() {
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-4xl mt-4 flex justify-between items-center py-2 px-6 md:px-16 z-50">
         {/* Logo Section */}
-        <div className="text-xl font-bold text-gray-800">Portfolio</div>
+        <div className="text-xl font-bold text-gray-400">Portfolio</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function NavBar() {
               className={`flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
                 active === item.name
                   ? "bg-pink-500 text-white shadow-md"
-                  : "text-gray-600 hover:text-gray-800"
+                  : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={() => handleClick(item.name, item.link)}
             >
