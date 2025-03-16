@@ -21,15 +21,15 @@ export default function Main() {
             <Home />
           </section>
           
-          <section id="about" className="min-h-screen flex items-center py-20">
+          <section id="about" className="min-h-screen flex items-center py-16 md:py-24">
             <About />
           </section>
           
-          <section id="projects" className="min-h-screen flex items-center py-20">
+          <section id="projects" className="min-h-screen flex items-center py-16 md:py-24">
             <Projects />
           </section>
           
-          <section id="contact" className="min-h-screen flex items-center py-20">
+          <section id="contact" className="min-h-screen flex items-center py-16 md:py-24">
             <Contact />
           </section>
         </main>

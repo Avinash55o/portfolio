@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import {  Environment, ContactShadows } from "@react-three/drei";
+import {  Environment, ContactShadows,OrbitControls } from "@react-three/drei";
 import BitCoinModel from "../model/model";
 import { useState, Suspense } from "react";
 
@@ -26,7 +26,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-slate-200"
+            className="text-base md:text-lg text-slate-200"
           >
             A passionate <span className="text-indigo-400 font-medium">Full-Stack Developer</span> & Web3 enthusiast, creating beautiful and functional web experiences.
           </motion.p>
@@ -54,8 +54,11 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="w-full md:w-auto relative"
         >
-          <div className="w-[400px] h-[400px] relative ">
-            <Canvas shadows camera={{ position: [0, 0, 5], fov: 40 }}>
+          <div className="w-[280px] h-[280px] md:w-[450px] md:h-[450px] relative ml-8 md:ml-0 overflow-hidden  ">
+            <Canvas 
+              shadows 
+              camera={{ position: [0, 0, 5], fov: 40  }}
+            >
              
               
               <ambientLight intensity={0.5} />
@@ -69,7 +72,7 @@ export default function Home() {
                   rotation={[0, 0, 0]}
                   onLoad={() => setIsModelLoaded(true)}
                 />
-                <Environment preset="sunset" />
+                <Environment preset="city" />
                 <ContactShadows 
                   opacity={0.4} 
                   scale={5} 
@@ -77,6 +80,14 @@ export default function Home() {
                   far={10} 
                   resolution={256} 
                   color="#000000" 
+                />
+                 <OrbitControls 
+                  enablePan={false} 
+                  enableZoom={false} 
+                  autoRotate
+                  autoRotateSpeed={2}
+                  minPolarAngle={Math.PI / 2.5} 
+                  maxPolarAngle={Math.PI / 2.5}
                 />
               </Suspense>
               
