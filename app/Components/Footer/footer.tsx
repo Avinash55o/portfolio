@@ -14,13 +14,13 @@ export default function Footer() {
             <a href="#" className="hover:text-pink-500 transition">Home</a>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500 transition">About</a>
+            <a href="#about" className="hover:text-pink-500 transition">About</a>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500 transition">Projects</a>
+            <a href="#projects" className="hover:text-pink-500 transition">Projects</a>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500 transition">Contact</a>
+            <a href="#contact" className="hover:text-pink-500 transition">Contact</a>
           </li>
         </ul>
 

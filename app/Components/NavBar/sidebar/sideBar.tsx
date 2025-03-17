@@ -11,7 +11,7 @@ const menuItems = [
 ];
 
 export default function SideBar({ closeSidebar }: { closeSidebar: () => void }) {
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("");
 
   // Scroll to section smoothly
   const handleClick = (name: string, link: string) => {
@@ -23,7 +23,7 @@ export default function SideBar({ closeSidebar }: { closeSidebar: () => void }) 
  
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-end z-50">
-      <div className="w-64 bg-white h-full shadow-lg flex flex-col p-5">
+      <div className="w-64 bg-yellow-50 h-full shadow-lg flex flex-col p-5">
         {/* Close Button */}
         <button
           className="self-end text-2xl text-gray-800"

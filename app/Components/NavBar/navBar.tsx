@@ -43,10 +43,10 @@ export default function NavBar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 mx-4 md:mx-8 mt-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg rounded-2xl py-2 px-4 md:px-8">
+      <nav className="fixed top-0 left-0 right-0 z-50 mx-4 md:mx-8 mt-4 bg-yellow-50 backdrop-blur-md shadow-lg rounded-4xl py-2 px-4 md:px-8">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo Section */}
-          <div className="text-xl font-bold text-gray-400">Portfolio</div>
+          <div className="text-xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">Portfolio</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-2">
@@ -55,7 +55,7 @@ export default function NavBar() {
               key={item.name}
               className={`flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
                 active === item.name
-                  ? "bg-pink-500 text-white shadow-md"
+                  ? "bg-yellow-500 text-white shadow-md"
                   : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={() => handleClick(item.name, item.link)}
