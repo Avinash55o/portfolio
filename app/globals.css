@@ -20,14 +20,14 @@
 }
 
 body {
-  background-color: #e8e8e8;
+  background-color: #5ACFC9;
   color: #212121;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Dark Mode */
 .dark body {
   background-color: #212121;
-  color: #e8e8e8;
+ 
 }
 .perspective {
   perspective: 1000px;

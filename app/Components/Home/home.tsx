@@ -9,7 +9,7 @@ export default function Home() {
   const [isModelLoaded, setIsModelLoaded] = useState(false);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 md:px-16">
+    <div className="w-full max-w-7xl mx-auto px-6 md:px-16 ">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Side: Text Content */}
         <div className="flex flex-col gap-4 max-w-lg text-center md:text-left">
@@ -17,18 +17,18 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-slate-50"
+            className="text-3xl md:text-5xl font-bold text-slate-50"
           >
-             Hi I&apos;m <span className="text-indigo-500">Avinash</span> 👋
+             Crafting Digital Solutions, <span className="bg-gradient-to-br from-red-500 to-yellow-400 bg-clip-text text-transparent">One Line of Code at a Time</span> 
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-lg text-slate-200"
+            className="text-base md:text-lg text-yellow-50"
           >
-            A passionate <span className="text-indigo-400 font-medium">Full-Stack Developer</span> & Web3 enthusiast, creating beautiful and functional web experiences.
+           From frontend interfaces to blockchain logic, I love solving problems with clean, efficient code.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -38,10 +38,10 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center md:justify-start gap-4 mt-4"
           >
-            <a href="#projects" className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition">
+            <a href="#projects" className="px-6 py-3 bg-yellow-500 text- font-semibold rounded-full shadow-lg hover:bg-gradient-to-br from-red-500 to-yellow-400 transition">
               View Projects
             </a>
-            <a href="#contact" className="px-6 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-500 hover:text-white transition">
+            <a href="#contact" className="px-6 py-3 border border-yellow-50 text-amber-600 font-semibold rounded-full shadow-lg hover:bg-gradient-to-br from-red-500 to-yellow-400 hover:text-white transition ">
               Contact Me
             </a>
           </motion.div>

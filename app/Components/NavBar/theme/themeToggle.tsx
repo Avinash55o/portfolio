@@ -37,10 +37,10 @@ export default function ThemeToggle() {
   />
 
   {/* Toggle Switch */}
-  <div className="w-20 h-10 md:w-24 md:h-12 bg-rose-400 rounded-full shadow-md transition-all duration-300 peer-checked:bg-emerald-500 relative">
+  <div className="w-18 h-8 md:w-20 md:h-10 bg-yellow-500 rounded-full shadow-md transition-all duration-300 peer-checked:bg-cyan-950 relative">
     {/* Toggle Ball */}
-    <div className={`absolute top-1  md:w-10 md:h-10 w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center transition-transform duration-300 ${
-          theme === "dark" ? "translate-x-[44px] md:translate-x-[50px]" : "translate-x-1"
+    <div className={`absolute top-1  md:w-8 md:h-8 w-6 h-6 bg-gray-50 rounded-full flex items-center justify-center transition-transform duration-300 ${
+          theme === "dark" ? "translate-x-[44px] md:translate-x-[44px]" : "translate-x-1"
         }`}>
       {theme === "dark" ? "🌞" : "🌙"}
     </div>

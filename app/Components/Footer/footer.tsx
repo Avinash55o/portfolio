@@ -14,7 +14,7 @@ export default function Footer() {
             <a href="#" className="hover:text-pink-500 transition">Home</a>
           </li>
           <li>
-            <a href="#about" className="hover:text-pink-500 transition">About</a>
+            <a href="#agit bout" className="hover:text-pink-500 transition">About</a>
           </li>
           <li>
             <a href="#projects" className="hover:text-pink-500 transition">Projects</a>
