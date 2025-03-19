@@ -34,7 +34,7 @@ export default function ResumeDownload() {
     <button
       onClick={downloadResume}
       disabled={isLoading}
-      className="px-6 py-3 bg-pink-500 text-white font-semibold rounded-full shadow-lg hover:bg-pink-600 transition disabled:opacity-50 disabled:cursor-not-allowed"
+      className="px-6 py-3 bg-yellow-500  font-semibold rounded-full shadow-lg hover:bg-gradient-to-br from-red-500 to-yellow-400 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isLoading ? 'Downloading...' : 'Download Resume'}
     </button>
