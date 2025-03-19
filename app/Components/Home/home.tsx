@@ -9,7 +9,7 @@ export default function Home() {
   const [isModelLoaded, setIsModelLoaded] = useState(false);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 md:px-16 ">
+    <div className="w-full max-w-7xl mx-auto  px-6 md:px-16 ">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Side: Text Content */}
         <div className="flex flex-col gap-4 max-w-lg text-center md:text-left">

@@ -17,7 +17,7 @@ export default function Main() {
         <NavBar />
         
         <main>
-          <section id="home" className="min-h-screen flex items-center bg-gradient-to-b from-cyan-950">
+          <section id="home" className="min-h-screen  flex items-center bg-gradient-to-b from-cyan-950">
             <Home />
           </section>
           
