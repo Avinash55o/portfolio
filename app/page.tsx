@@ -5,6 +5,7 @@ import Projects from "./Components/Projects/projects";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/contact";
 import Background from "./Components/Background/Background";
+import Service from "./Components/services/servies";
 
 export default function Main() {
   return (
@@ -21,12 +22,16 @@ export default function Main() {
             <Home />
           </section>
           
-          <section id="about" className="min-h-screen flex items-center py-16 md:py-24">
+          <section id="about" className="min-h-screen flex items-center py-16 md:py-30 ">
             <About />
           </section>
           
           <section id="projects" className="min-h-screen flex items-center py-16 md:py-24">
             <Projects />
+          </section>
+
+          <section id="service" className="min-h-screen flex items-center py-16 md:py-24">
+            <Service/>
           </section>
           
           <section id="contact" className="min-h-screen flex items-center py-16 md:py-24">
