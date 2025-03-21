@@ -29,7 +29,7 @@ export default function About() {
 
         {/* Right - Content */}
         <motion.div initial={{opacity:0,x:50}} whileInView={{opacity:1,x:0}} transition={{duration:0.8, delay:0.4 }} viewport={{once:true, amount:0.3}} className="w-full md:w-2/3 text-center md:text-left">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-gray-600 dark:text-gray-300">
             <span className="bg-gradient-to-br from-red-500 to-yellow-400 bg-clip-text text-transparent">
               Leveling Up:
             </span>{" "}

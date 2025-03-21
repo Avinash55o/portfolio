@@ -19,16 +19,49 @@
   }
 }
 
+/* Base styles */
 body {
-  background-color: #5ACFC9;
-  color: #212121;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #171717;
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
+
 /* Dark Mode */
 .dark body {
-  background-color: #212121;
- 
+  background-color: #0a0a0a;
+  color: #ededed;
 }
+
+/* Fix for text colors in light mode - ensure cards and elements have proper contrast */
+.text-gray-900 {
+  color: #171717;
+}
+.dark .text-gray-900 {
+  color: #ededed;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+/* Utility Classes */
 .perspective {
   perspective: 1000px;
 }
@@ -41,4 +74,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

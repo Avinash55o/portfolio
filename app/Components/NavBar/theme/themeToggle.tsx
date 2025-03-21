@@ -1,20 +1,25 @@
+"use client";
 import { useEffect, useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      // Check if user has a preference stored
-      const storedTheme = localStorage.getItem("theme");
-      if (storedTheme) return storedTheme;
+  const [theme, setTheme] = useState("dark"); // Default for initial render
 
+  // Initialize theme on client side
+  useEffect(() => {
+    // Check if user has a preference stored
+    const storedTheme = localStorage.getItem("theme");
+    
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
       // Otherwise, check system preference
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
     }
-    return "dark"; // Default to dark (for SSR safety)
-  });
+  }, []);
 
+  // Apply theme changes
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -25,28 +30,21 @@ export default function ThemeToggle() {
     }
   }, [theme]);
 
-  return (
-<label className="relative cursor-pointer">
- 
- {/* Hidden Checkbox (Peer Element) */}
- <input
-    type="checkbox"
-    className="sr-only peer"
-    checked={theme === "dark"}
-    onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-  />
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
-  {/* Toggle Switch */}
-  <div className="w-18 h-8 md:w-20 md:h-10 bg-yellow-500 rounded-full shadow-md transition-all duration-300 peer-checked:bg-cyan-950 relative">
-    {/* Toggle Ball */}
-    <div className={`absolute top-1  md:w-8 md:h-8 w-6 h-6 bg-gray-50 rounded-full flex items-center justify-center transition-transform duration-300 ${
-          theme === "dark" ? "translate-x-[44px] md:translate-x-[44px]" : "translate-x-1"
-        }`}>
-      {theme === "dark" ? "🌞" : "🌙"}
-    </div>
-  </div>
-  
- 
-</label>
+  return (
+    <button 
+      onClick={toggleTheme}
+      className="relative inline-flex items-center justify-center p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition-all duration-300 hover:scale-105"
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+    >
+      {theme === "dark" ? (
+        <FaSun className="text-yellow-400 text-lg" />
+      ) : (
+        <FaMoon className="text-indigo-700 text-lg" />
+      )}
+    </button>
   );
 }
