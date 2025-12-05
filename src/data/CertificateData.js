@@ -1,4 +1,4 @@
-import PythonCert from "../assets/certificates/python.png";
+import PythonCert from "../assets/certificates/Python.png";
 import aiInternCert from "../assets/certificates/ai-intern.jpg";
 import devCert from "../assets/certificates/certificate-100dev.png"
 import ibmcert from "../assets/certificates/IBM_Hackathon.jpg";
