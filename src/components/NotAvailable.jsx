@@ -6,7 +6,7 @@ export default function NotAvailable() {
       
       <div className="bg-white dark:bg-gray-900 border dark:border-white/20 rounded-md p-8 max-w-md w-full text-center shadow-lg">
         
-        <h1 className="text-2xl font-bold mb-3 dark:text-white">
+        <h1 className="text-2xl font-bold mb-3 dark:text-white font-press">
           Live Demo Not Available
         </h1>
 
@@ -17,7 +17,7 @@ export default function NotAvailable() {
 
         <button
           onClick={() => navigate("/")}
-          className="px-5 py-2 bg-blue-600 text-white cursor-pointer rounded-md hover:bg-blue-700 transition-all"
+          className="px-5 py-2 font-press text-sm text-white/80 border dark:border-white/60 border-black/60  rounded transition-all"
         >
           Go Back
         </button>
