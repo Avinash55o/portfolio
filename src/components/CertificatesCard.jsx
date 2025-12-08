@@ -12,11 +12,11 @@ function CertificatesCard({ Title,Image, description, link }) {
       </p>
 
       <div className='flex justify-between items-center text-blue-700 mt-auto gap-x-4'>
-        <Link href={link} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <button className='underline cursor-pointer dark:text-white/70 dark:hover:text-white'>
             Live
           </button>
-        </Link>
+        </a>
       </div>
     </div>
   );
