@@ -1,4 +1,6 @@
 import { FaGithub } from "react-icons/fa6";
+import { Link} from "react-router-dom";
+
 
 function ProjectCard({ projectName, description, link, github, tech }) {
   return (
@@ -22,11 +24,19 @@ function ProjectCard({ projectName, description, link, github, tech }) {
       </div>
 
       <div className='flex justify-between items-center text-blue-700 mt-auto gap-x-4'>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <button className='underline cursor-pointer dark:text-white/70 dark:hover:text-white'>
-            Live
-          </button>
-        </a>
+      {link.startsWith('/') ? (
+          <Link to={link}>
+            <button className='underline cursor-pointer dark:text-white/70 dark:hover:text-white'>
+              Live
+            </button>
+          </Link>
+        ) : (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <button className='underline cursor-pointer dark:text-white/70 dark:hover:text-white'>
+              Live
+            </button>
+          </a>
+        )}
         <a href={github} target="_blank" rel="noopener noreferrer">
           <button className='cursor-pointer dark:text-white/70 dark:hover:text-white'>
             <FaGithub size={25} />
