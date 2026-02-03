@@ -8,7 +8,7 @@ function ProjectCard({ projectName, description, link, github, tech }) {
       
       <h1 className='font-bold text-sm font-press mb-2'>{projectName}</h1>
 
-      <p className='text-xs h-[80px] dark:text-white/60 mb-2'>
+      <p className='text-xs line-clamp-3 dark:text-white/60 mb-3'>
         {description}
       </p>
 
