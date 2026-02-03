@@ -25,7 +25,7 @@ function Greetings() {
             <p>A curious software developer ... exploring full-stack development and AI, learning as I build</p>
         </div>
         <div className='flex text-blue-600 dark:text-blue-400   mx-auto gap-x-2'>
-            <h1 className='underline text-blue-500'>Email</h1>
+            <h1 className='underline text-blue-500 cursor-pointer'>Email</h1>
             <button onClick={handleEmailCopy} className='cursor-pointer text-black/60 dark:text-white/60'><MdContentCopy size={15}/></button>
         </div>
         

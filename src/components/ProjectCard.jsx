@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 
 function ProjectCard({ projectName, description, link, github, tech }) {
   return (
-    <div className='w-[300px] min-h-[270px] border dark:border-white/30 dark:text-white p-4 flex flex-col rounded-sm hover:scale-102 transition-transform duration-300'>
+    <div className='w-[300px] min-h-[270px] border  dark:border-white/30 dark:text-white p-4 flex flex-col rounded-sm hover:scale-102 transition-transform duration-300'>
       
       <h1 className='font-bold text-sm font-press mb-2'>{projectName}</h1>
 
