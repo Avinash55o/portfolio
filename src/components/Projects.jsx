@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard'
-import { ProjectName, GitHUB_UserName } from '../data/ProjectData'
+import ProjectCardSkeleton from './ProjectCardSkeleton'
+import { ProjectName } from '../data/ProjectData'
 import { fetchAllProjects } from '../utils/fetchGitHubprojects'
 import { useState, useEffect } from 'react'
 
@@ -15,6 +16,7 @@ function Projects() {
       try {
         setLoading(true)
         const fetchedProjects = await fetchAllProjects(ProjectName)
+        await new Promise(resolve=>(setTimeout(resolve,1500)))
         setProjects(fetchedProjects)
       } catch (err) {
         setError(err.message)
@@ -41,7 +43,10 @@ function Projects() {
         <div className='mx-auto'>
           <h1 className='font-press dark:text-white'>PROJECTS</h1>
         </div>
-        <div className='mx-auto dark:text-white'>Loading projects...</div>
+        <div className='py-3 grid grid-col-1 md:grid-cols-3 mx-auto gap-4'>
+          <ProjectCardSkeleton />
+          <ProjectCardSkeleton />
+          <ProjectCardSkeleton /></div>
       </div>
     )
   }
