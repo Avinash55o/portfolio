@@ -28,6 +28,7 @@ function VantaBackground() {
                 backgroundColor: isDark === 'dark' ? 0x0f0f1e : 0xf2efd6,
                 points: 20.00,
                 maxDistance: 0.00,
+                vertexColors: false,
                 spacing: 15.00
             })
         }
@@ -50,7 +51,8 @@ function VantaBackground() {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                zIndex: 0
+                zIndex: -1,
+                pointerEvents:'none'
             }}
         />
     )
