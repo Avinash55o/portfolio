@@ -16,7 +16,7 @@ function Projects() {
       try {
         setLoading(true)
         const fetchedProjects = await fetchAllProjects(ProjectName)
-        await new Promise(resolve=>(setTimeout(resolve,1500)))
+        await new Promise(resolve => (setTimeout(resolve, 1500)))
         setProjects(fetchedProjects)
       } catch (err) {
         setError(err.message)
@@ -41,7 +41,7 @@ function Projects() {
     return (
       <div className='w-full flex flex-col gap-y-4'>
         <div className='mx-auto'>
-          <h1 className='font-press dark:text-white'>PROJECTS</h1>
+          <h1 className='font-press text-[#172121] dark:text-[#E5D0CC]'>PROJECTS</h1>
         </div>
         <div className='py-3 grid grid-col-1 md:grid-cols-3 mx-auto gap-4'>
           <ProjectCardSkeleton />
@@ -56,9 +56,9 @@ function Projects() {
     return (
       <div className='w-full flex flex-col gap-y-4'>
         <div className='mx-auto'>
-          <h1 className='font-press dark:text-white'>PROJECTS</h1>
+          <h1 className='font-press text-[#172121] dark:text-[#E5D0CC]'>PROJECTS</h1>
         </div>
-        <div className='mx-auto dark:text-white text-red-500'>
+        <div className='mx-auto text-[#7F7B82] dark:text-[#BFACB5]'>
           Error loading projects: {error}
         </div>
       </div>
@@ -84,12 +84,12 @@ function Projects() {
       </div>
       {
         visible < projects.length && (
-          <div onClick={showMore} className='mx-auto dark:text-white text-xs border dark:border-white/30 px-1 py-2 rounded-sm hover:scale-105 transition duration-300 ease-in-out cursor-pointer'>Load more</div>
+          <div onClick={showMore} className='mx-auto dark:text-[#E5D0CC] text-xs border border-[#BFACB5] dark:border-[#BFACB5]/40 px-1 py-2 rounded-sm hover:scale-105 transition duration-300 ease-in-out cursor-pointer'>Load more</div>
         )
       }
       {
         visible > 3 && (
-          <div onClick={showLess} className='mx-auto dark:text-white text-xs border dark:border-white/30 px-1 py-2 rounded-sm hover:scale-105 transition duration-300 ease-in-out cursor-pointer'>Show less</div>
+          <div onClick={showLess} className='mx-auto dark:text-[#E5D0CC] text-xs border border-[#BFACB5] dark:border-[#BFACB5]/40 px-1 py-2 rounded-sm hover:scale-105 transition duration-300 ease-in-out cursor-pointer'>Show less</div>
         )
       }
     </div>

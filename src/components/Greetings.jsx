@@ -20,8 +20,8 @@ function Greetings() {
     }
 
     return (
-        <div className='flex flex-col mx-auto max-w-4xl py-10 text-center mt-15 space-y-3 dark:text-white'>
-            <div className=' font-press font-bold text-sm'>
+        <div className='flex flex-col mx-auto max-w-4xl py-10 text-center mt-2 space-y-3 text-[#172121] dark:text-[#E5D0CC]'>
+            <div className='font-press font-bold text-sm'>
                 <h1>Hi, I'm Avinash Boruah</h1>
             </div>
             <div>
@@ -35,7 +35,7 @@ function Greetings() {
             <div className='flex flex-col sm:flex-row gap-3 mx-auto pt-2'>
                 <button
                     onClick={handleViewResume}
-                    className='flex items-center justify-center gap-2 px-5 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-300 hover:scale-105 font-semibold text-sm'
+                    className='flex items-center justify-center gap-2 px-5 py-2 bg-[#BFACB5] dark:bg-[#BFACB5] text-[#172121] rounded hover:bg-[#7F7B82] dark:hover:bg-[#7F7B82] transition-all duration-300 hover:scale-105 font-semibold text-sm'
                 >
                     <FaEye size={16} />
                     View Resume
@@ -43,7 +43,7 @@ function Greetings() {
 
                 <button
                     onClick={handleDownloadResume}
-                    className='flex items-center justify-center gap-2 px-5 py-2 border dark:border-white/30 text-black dark:text-white rounded hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-300 hover:scale-105 font-semibold text-sm'
+                    className='flex items-center justify-center gap-2 px-5 py-2 border border-[#BFACB5] dark:border-[#BFACB5] text-black dark:text-[#E5D0CC] rounded hover:bg-[#BFACB5]/20 dark:hover:bg-[#444554] transition-all duration-300 hover:scale-105 font-semibold text-sm'
                 >
                     <FaFileDownload size={16} />
                     Download Resume

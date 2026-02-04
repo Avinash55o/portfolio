@@ -24,8 +24,8 @@ function VantaBackground() {
                 minWidth: 200.00,
                 scale: 1.00,
                 scaleMobile: 1.00,
-                color: isDark === 'dark' ? 0xa04598 : 0xd2639b,  
-                backgroundColor: isDark === 'dark' ? 0x0f0f1e : 0xf2efd6,
+                color: isDark === 'dark' ? 0xBFACB5 : 0x7F7B82,  // Lilac Ash (dark) / Rosy Granite (light)
+                backgroundColor: isDark === 'dark' ? 0x172121 : 0xE5D0CC,  // Carbon Black (dark) / Almond Silk (light)
                 points: 20.00,
                 maxDistance: 0.00,
                 vertexColors: false,
@@ -52,7 +52,7 @@ function VantaBackground() {
                 width: '100%',
                 height: '100%',
                 zIndex: -1,
-                pointerEvents:'none'
+                pointerEvents: 'none'
             }}
         />
     )
