@@ -68,7 +68,7 @@ function Projects() {
   return (
     <div className='w-full flex flex-col gap-y-4'>
       <div className='mx-auto'>
-        <h1 className='font-press dark:text-white'>PROJECTS</h1>
+        <h1 className='font-press text-[#172121] dark:text-[#E5D0CC]'>PROJECTS</h1>
       </div>
       <div className='py-3 grid grid-cols-1 md:grid-cols-3 mx-auto gap-4'>
         {projects.slice(0, visible).map((project) => (
